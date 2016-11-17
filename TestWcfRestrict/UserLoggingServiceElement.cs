@@ -6,8 +6,13 @@ using System.Web;
 
 namespace TestWcfRestrict
 {
+    using LightInject;
+
     public class UserLoggingServiceElement : BehaviorExtensionElement
     {
+        public static Func<MyInspectorAttribute> AttributeFactory { get;set; }
+
+
         public override Type BehaviorType
         {
             get
@@ -18,7 +23,7 @@ namespace TestWcfRestrict
 
         protected override object CreateBehavior()
         {
-            return new MyInspectorAttribute();
+            return AttributeFactory();
         }
     }
 }

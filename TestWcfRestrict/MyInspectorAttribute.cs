@@ -40,9 +40,12 @@ namespace TestWcfRestrict
 
         public object BeforeCall(string operationName, object[] inputs)
         {
-            string r = ExternalServiceInstance.Method1(45);   //ExternalServiceInstance = null
+            string r = ExternalServiceInstance.Method1(45);   //ExternalServiceInstance is no longer null.
 
 
+            return null;
+
+            // This still fails as I am not sure what is going on here 
             var myService = (Service1)OperationContext.Current.InstanceContext.GetServiceInstance();
             AuthState authState = myService.AuthState;           
 
@@ -79,7 +82,8 @@ namespace TestWcfRestrict
 
         public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase)
         {
-            IParameterInspector parameterInspector = new MyInspectorAttribute();
+            IParameterInspector parameterInspector = UserLoggingServiceElement.AttributeFactory();
+                
 
             foreach (ChannelDispatcher dispatcher in serviceHostBase.ChannelDispatchers)
             {
@@ -91,9 +95,7 @@ namespace TestWcfRestrict
                     foreach (DispatchOperation dispatchOperation in dispatchOperations)
                     {
                         dispatchOperation.ParameterInspectors.Add(parameterInspector);
-                    }
-
-                   
+                    }                   
                 }
             }
         }

@@ -41,16 +41,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LightInject, Version=3.0.2.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LightInject.3.0.2.6\lib\net45\LightInject.dll</HintPath>
+    <Reference Include="LightInject, Version=4.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.4.1.4\lib\net45\LightInject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LightInject.Interception, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LightInject.Interception.1.0.0.7\lib\net45\LightInject.Interception.dll</HintPath>
+    <Reference Include="LightInject.Interception, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Interception.1.2.1\lib\net45\LightInject.Interception.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LightInject.Wcf, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LightInject.Wcf.1.0.0.1\lib\net45\LightInject.Wcf.dll</HintPath>
+    <Reference Include="LightInject.Wcf, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Wcf.1.1.0\lib\net45\LightInject.Wcf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
